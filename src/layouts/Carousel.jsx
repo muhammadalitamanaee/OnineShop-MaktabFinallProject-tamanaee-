@@ -5,12 +5,14 @@ import carousel3 from "../assets/carousel3.jpg";
 import carousel4 from "../assets/carousel4.jpg";
 import carousel2 from "../assets/carousel2.jpg";
 import carousel1 from "../assets/carousel1.jpg";
+import carousel6 from "../assets/carousel6.jpg";
+import carousel7 from "../assets/carousel7.jpg";
 const MainCarousel = () => {
   return (
     <>
       <div
         id="indicators-carousel"
-        className="relative bg-zinc-100 rounded-lg"
+        className="relative bg-zinc-500 rounded-lg"
         data-carousel="static"
       >
         {/* <!-- Carousel wrapper --> */}
@@ -21,7 +23,7 @@ const MainCarousel = () => {
             data-carousel-item="active"
           >
             <img
-              src={carousel1}
+              src={carousel6}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
@@ -29,7 +31,7 @@ const MainCarousel = () => {
           {/* <!-- Item 2 --> */}
           <div class="hidden duration-700 ease-in-out">
             <img
-              src={carousel2}
+              src={carousel7}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
@@ -37,7 +39,7 @@ const MainCarousel = () => {
           {/* <!-- Item 3 --> */}
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
             <img
-              src={carousel3}
+              src={carousel5}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
             />
