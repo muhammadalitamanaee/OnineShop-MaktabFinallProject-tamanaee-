@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ["Vazirmatn FD", "sans-serif"],
+    },
   },
   plugins: [require("flowbite/plugin")],
 };

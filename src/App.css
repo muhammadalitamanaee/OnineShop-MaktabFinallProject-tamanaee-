@@ -40,3 +40,15 @@
 .read-the-docs {
   color: #888;
 }
+@font-face {
+  font-family: Vazirmatn FD;
+  src: url("fonts/webfonts/Vazirmatn-FD-Medium.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: Vazirmatn FD;
+}
+
+/* داخل کامچوننت محصولات برای سرپ باید خارجی وارد کنی چون روی داده ی ارسالی از بکند فیلتر میزنه و داده ی ارسالی از بکند اعدادش فارسی نیست */

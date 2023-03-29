@@ -1,10 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 const SearchBar = (props) => {
   const { className } = props;
+  const navigate = useNavigate();
+  const navigate1 = useNavigate();
+  const navigate2 = useNavigate();
   return (
     <div className={`flex ${className}`} dir="ltr">
       <label
-        for="search-dropdown"
+        htmlFor="search-dropdown"
         className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
       >
         Your Email
@@ -24,9 +28,9 @@ const SearchBar = (props) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-            clip-rule="evenodd"
+            clipRule="evenodd"
           ></path>
         </svg>
       </button>
@@ -46,7 +50,7 @@ const SearchBar = (props) => {
               تلفن همراه
             </a>
           </li>
-          <li>
+          <li onClick={() => navigate("/Products")}>
             <a
               href="#"
               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -54,7 +58,7 @@ const SearchBar = (props) => {
               خانه و آشپزخانه
             </a>
           </li>
-          <li>
+          <li onClick={() => navigate1("/Mojodi")}>
             <a
               href="#"
               className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
@@ -62,18 +66,9 @@ const SearchBar = (props) => {
               آرایش و زیبایی
             </a>
           </li>
-          <li>
-            <a
-              href="#"
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >
-              سوپر مارکت
-            </a>
-          </li>
         </ul>
-        Name
       </div>
-      <div class="relative w-full">
+      <div className="relative w-full">
         <input
           type="search"
           id="search-dropdown"
@@ -94,9 +89,9 @@ const SearchBar = (props) => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             ></path>
           </svg>
