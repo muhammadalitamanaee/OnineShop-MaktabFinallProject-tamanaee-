@@ -4,8 +4,9 @@ import { useState, useEffect } from "react";
 import { baseUrl } from "../Axios";
 import axios from "axios";
 import { addCommas } from "@persian-tools/persian-tools";
-
+import { cartAction } from "../../store/cart-store";
 import SimilarProducts from "./SimilarProducts";
+import { useDispatch } from "react-redux";
 const ProductDetails = ({ product }) => {
   const [posts, setPosts] = useState([]);
   const { ProductId } = useParams();
@@ -25,6 +26,10 @@ const ProductDetails = ({ product }) => {
     setLoading(false);
   }, [ProductId]);
 
+  const dispatch = useDispatch();
+  const addProductHandler = (id, price, image, name, brand) => {
+    dispatch(cartAction.addToCart({ id, price, image, name, brand }));
+  };
   console.log(image);
 
   return (
@@ -96,6 +101,15 @@ const ProductDetails = ({ product }) => {
                 <button
                   type="button"
                   className="h-14 px-6 py-2 font-semibold rounded-xl bg-[#046C4E] hover:bg-[#25866b] text-white"
+                  onClick={() => {
+                    addProductHandler(
+                      posts.id,
+                      posts.price,
+                      image,
+                      posts.name,
+                      posts.brand
+                    );
+                  }}
                 >
                   اضافه به سبد خرید{" "}
                 </button>

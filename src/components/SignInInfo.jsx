@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import react from "../assets/react.svg";
 const SignInInfo = (props) => {
   const { className } = props;
-  const quantity = useSelector((state) => state.cart.items);
+  const items = useSelector((state) => state.cart.items);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
   return (
     <div className={`flex items-center md:order-2 ${className}`}>
       <button
@@ -33,15 +35,15 @@ const SignInInfo = (props) => {
         </div>
         <ul className="py-2" aria-labelledby="user-menu-button">
           <li>
-            <p
-              // to="/shppingCart"
+            <Link
+              to="/shoppingCart"
               className=" flex gap-2 justify-center items-center  px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
             >
               سبد خرید
               <span className="w-4 h-4 rounded-full bg-gray-200 text-red-600 text-center text-[15px]">
-                {quantity.length}
+                {totalQuantity}
               </span>
-            </p>
+            </Link>
           </li>
           <li>
             <a
