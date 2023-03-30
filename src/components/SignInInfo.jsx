@@ -30,7 +30,7 @@ const SignInInfo = (props) => {
             محمد علی تمنایی{" "}
           </span>
           <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">
-            name@flowbite.com
+            alitaman200041@gmail.com{" "}
           </span>
         </div>
         <ul className="py-2" aria-labelledby="user-menu-button">

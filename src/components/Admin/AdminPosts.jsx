@@ -5,6 +5,7 @@ import { baseUrl } from "../Axios";
 import DeleteProduct from "./delete Product/DeleteProduct";
 import EditProduct from "./EditProduct";
 import { addCommas } from "@persian-tools/persian-tools";
+import { useNavigate } from "react-router-dom";
 export default function AdminPosts({
   posts,
   loading,
@@ -19,17 +20,14 @@ export default function AdminPosts({
   const [searchInput, setSearchInput] = useState("");
   const [activeEditButton, setActiveEditButton] = useState(null);
   const [product, setProduct] = useState(null);
+  const navigate = useNavigate();
   useEffect(() => {
     axios
       .get(`${baseUrl}/products/${activeEditButton}`)
       .then((res) => setProduct(res.data))
       .catch((err) => console.log(err));
   }, [activeEditButton]);
-  // console.log(product);
   const inputHandler = (e) => {
-    // e.preventDefault();
-    // setSearchInput(e.target.value);
-    // console.log("object");
     queryStringHandler(e.target.value);
   };
   const closeModal = () => {
@@ -86,6 +84,14 @@ export default function AdminPosts({
         </div>
       </form>
       <AddProduct className="mb-4" />
+      <button
+        onClick={() => {
+          navigate("/Orders");
+        }}
+        className="bg-red-400"
+      >
+        سفارشات
+      </button>
       <div
         className="relative overflow-x-auto shadow-md sm:rounded-lg"
         dir="rtl"

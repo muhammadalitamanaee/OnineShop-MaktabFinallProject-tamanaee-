@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { baseUrl } from "./../components/Axios";
 import { cartAction } from "../store/cart-store";
 import { addCommas } from "@persian-tools/persian-tools";
@@ -8,6 +8,7 @@ const ShoppingCart = () => {
   const items = useSelector((state) => state.cart.items);
   const Quantity = useSelector((state) => state.cart.totoalQuantity);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const addProductHandler = (
     id,
     price,
@@ -158,6 +159,15 @@ const ShoppingCart = () => {
           <hr className="w-full h-[2px] bg-red-500" />
         </div>
       ))}
+
+      <button
+        className="bg-green-400 p-3 mt-4 rounded-[16px]"
+        onClick={() => {
+          navigate("/BillingForm");
+        }}
+      >
+        نهایی کردن سبد خرید{" "}
+      </button>
     </div>
   );
 };

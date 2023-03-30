@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Card from "./Card";
+import Card from "../Card";
 const Posts = ({ posts, loading }) => {
   if (loading) {
     return <h2>Loading...</h2>;

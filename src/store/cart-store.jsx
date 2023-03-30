@@ -1,49 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// const cartSlice = createSlice({
-//   name: "cart",
-//   initialState: {
-//     items: [], // list of items in cart
-//   },
-//   reducers: {
-//     addItem: (state, action) => {
-//       const item = action.payload;
-//       const existingItem = state.items.find((i) => i.id === item.id);
-//       console.log("add");
-//       if (existingItem) {
-//         // if the item already exists in the cart, increase its quantity
-//         console.log("have this already");
-//         existingItem.quantity += item.quantity;
-//       } else {
-//         // otherwise, add the item to the cart
-//         console.log("we didin have that we added");
-//         state.items.push(item);
-//       }
-//     },
-//     removeItem: (state, action) => {
-//       const itemId = action.payload;
-//       state.items = state.items.filter((i) => i.id !== itemId);
-//     },
-//     clearCart: (state) => {
-//       state.items = [];
-//     },
-//     loadCartFromLocalStorage: (state) => {
-//       const savedCart = localStorage.getItem("shoppingCart");
-
-//       if (savedCart) {
-//         state.items = JSON.parse(savedCart);
-//       }
-//     },
-//     saveCartToLocalStorage: (state) => {
-//       localStorage.setItem("shoppingCart", JSON.stringify(state.items));
-//     },
-//   },
-// });
-
-// const sendCartData=()=>{
-// we cando it  here too but we decide to do it in the other file named cart-action.jsx
-// }
-
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
