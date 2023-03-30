@@ -48,7 +48,7 @@ const cartSlice = createSlice({
   name: "cart",
   initialState: {
     items: [],
-    totalQuantity: 0,
+    totalQuantity: JSON.parse(localStorage.getItem("cartQuantity")),
     changed: false,
   },
   reducers: {
@@ -77,18 +77,36 @@ const cartSlice = createSlice({
         existingItem.quantity++;
         existingItem.totalPrice += +newItem.price;
       }
+      localStorage.setItem("cartItems", JSON.stringify(state.items));
+      localStorage.setItem("cartQuantity", JSON.stringify(state.totalQuantity));
     },
     removeProduct(state, action) {
       const id = action.payload;
       const existingitem = state.items.find((item) => item.id === id.id);
       state.totalQuantity--;
       state.changed = true;
+      localStorage.setItem("cartQuantity", JSON.stringify(state.totalQuantity));
 
       if (existingitem.quantity === 1) {
         state.items = state.items.filter((item) => item.id !== id.id);
+        localStorage.setItem("cartItems", JSON.stringify(state.items));
       } else {
         existingitem.quantity--;
         existingitem.totalPrice -= +existingitem.price;
+      }
+    },
+    clearCart(state) {
+      state.items = [];
+      localStorage.removeItem("cartItems");
+      localStorage.setItem("cartQuantity", JSON.stringify(0));
+    },
+    loadCart(state) {
+      const cartItems = localStorage.getItem("cartItems");
+      const Q = localStorage.getItem("cartQuantity");
+
+      if (cartItems) {
+        state.items = JSON.parse(cartItems);
+        state.totalQuantity = JSON.parse(Q);
       }
     },
   },
