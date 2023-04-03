@@ -22,6 +22,7 @@ import PaymentForm from "./pages/PaymentForm";
 import OtherProduct from "./pages/OtherProduct";
 import BillingForm from "./pages/BillingForm";
 import Orders from "./pages/Orders";
+import PaymentCheckout from "./pages/PaymentCheckout";
 function App() {
   const [loginState, setLogin] = useState(true);
   return (
@@ -38,6 +39,8 @@ function App() {
           <Route path="/Orders" element={<Orders />} />
           <Route path="/BillingForm" element={<BillingForm />} />
           <Route path="/Payment" element={<PaymentForm />} />
+          <Route path="/PaymentCheckout" element={<PaymentCheckout />} />
+
           <Route>
             <Route path="/:ProductId" element={<ProductDetails />} />
           </Route>

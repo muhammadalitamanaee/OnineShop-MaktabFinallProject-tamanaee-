@@ -88,7 +88,7 @@ export default function AdminPosts({
         onClick={() => {
           navigate("/Orders");
         }}
-        className="bg-red-400"
+        className="bg-red-400 p-3 rounded-xl"
       >
         سفارشات
       </button>

@@ -10,16 +10,20 @@ const LoginAdmin = () => {
   const [accessT, setAccesst] = useState("");
   const accesToken = useSelector((state) => state.login.accesToken);
   const t = useSelector((state) => state.accessToken);
-  const [loginForm, setLoginform] = useState({ username: "", password: "" });
+  const [loginForm, setLoginform] = useState({
+    username: "admin",
+    password: "admin",
+  });
   const userChangeHandler = (e) => {
     setLoginform({ ...loginForm, username: e.target.value });
     console.log(loginForm);
   };
   const userPassHandler = (e) => {
     setLoginform({ ...loginForm, password: e.target.value });
+    console.log(loginForm);
   };
   const submitHandler = (username, password) => {
-    return dispatch(getTokens(username, password)), navigate("/AdminProducts");
+    navigate("/AdminProducts");
   };
 
   return (
@@ -77,7 +81,10 @@ const LoginAdmin = () => {
         <button
           type="button"
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          onClick={() => submitHandler(loginForm.username, loginForm.password)}
+          onClick={() => {
+            dispatch(getTokens(loginForm.username, loginForm.password)),
+              submitHandler(loginForm.username, loginForm.password);
+          }}
         >
           ورود
         </button>

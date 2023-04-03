@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { baseUrl } from "../components/Axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const BillingForm = () => {
   const [name, setName] = useState(null);
   const [lastName, setLastName] = useState(null);
@@ -22,6 +23,7 @@ const BillingForm = () => {
   // const productHandler = (e) => {
   //   setName(e.target.value);
   // };
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
     const product = {
@@ -41,6 +43,8 @@ const BillingForm = () => {
         },
       })
       .then((res) => console.log(res));
+
+    navigate("/PaymentCheckout");
   };
   return (
     <form onSubmit={submitHandler}>
