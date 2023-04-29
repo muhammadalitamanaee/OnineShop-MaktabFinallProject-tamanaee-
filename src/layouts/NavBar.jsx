@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import MainContex from "./../contex/contex-hook";
+import OtherProduct from "./../pages/OtherProduct";
 
 const NavBar = (props) => {
   const mainContex = useContext(MainContex);
@@ -101,7 +102,7 @@ const NavBar = (props) => {
                       href="#"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white outline-none mx-auto w-full "
                       onClick={() => {
-                        navigate("/LopTops");
+                        navigate("/OtherProducts");
                       }}
                     >
                       تبلت ساعت هوشمند و...
