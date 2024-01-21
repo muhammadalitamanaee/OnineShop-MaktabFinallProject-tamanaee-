@@ -6,10 +6,7 @@ const NavBar = (props) => {
   const mainContex = useContext(MainContex);
   const navigate = useNavigate();
   return (
-    <nav
-      dir="rtl"
-      className="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50"
-    >
+    <nav dir="rtl" className="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <button
           data-collapse-toggle="navbar-dropdown"
@@ -70,10 +67,7 @@ const NavBar = (props) => {
                 id="dropdownNavbar"
                 className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
               >
-                <ul
-                  className="py-2 text-sm text-gray-700 dark:text-gray-400"
-                  aria-labelledby="dropdownLargeButton"
-                >
+                <ul className="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                   <li>
                     <button
                       href="#"
@@ -116,10 +110,7 @@ const NavBar = (props) => {
               </div>
             </li>
             <li>
-              <a
-                href="#"
-                className="flex justify-center items-center gap-[10px]"
-              >
+              <a href="#" className="flex justify-center items-center gap-[10px]">
                 <a
                   href="#"
                   className=" py-2 pl-3 pr-4 text-zinc-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent flex justify-center items-center gap-1 "
@@ -142,10 +133,7 @@ const NavBar = (props) => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="flex justify-center items-center gap-[10px]"
-              >
+              <a href="#" className="flex justify-center items-center gap-[10px]">
                 <a
                   href="#"
                   className=" py-2 pl-3 pr-4 text-zinc-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent flex justify-center items-center gap-1"
@@ -167,10 +155,7 @@ const NavBar = (props) => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="flex justify-center items-center gap-[10px]"
-              >
+              <a href="#" className="flex justify-center items-center gap-[10px]">
                 <a
                   href="#"
                   className=" py-2 pl-3 pr-4 text-zinc-500 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent flex justify-center items-center gap-1"

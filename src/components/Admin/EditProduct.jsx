@@ -59,9 +59,7 @@ const EditProduct = (props) => {
         <div className="relative p-4 rounded-lg shadow dark:bg-gray-800 sm:p-5  bg-zinc-200">
           {/* <!-- Modal header --> */}
           <div className="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-gray-600">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              ویرایش محصول{" "}
-            </h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">ویرایش محصول </h3>
             <button
               type="button"
               className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -201,10 +199,9 @@ const EditProduct = (props) => {
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Write a description..."
                 >
-                  Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7
-                  processor, Turbo Boost up to 5.0GHz, 16GB 2666MHz DDR4 memory,
-                  Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD
-                  storage, Gigabit Ethernet, Magic Mouse 2, Magic Keyboard - US
+                  Standard glass, 3.8GHz 8-core 10th-generation Intel Core i7 processor, Turbo Boost up to 5.0GHz, 16GB
+                  2666MHz DDR4 memory, Radeon Pro 5500 XT with 8GB of GDDR6 memory, 256GB SSD storage, Gigabit Ethernet,
+                  Magic Mouse 2, Magic Keyboard - US
                 </textarea>
               </div>
             </div>

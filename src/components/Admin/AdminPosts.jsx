@@ -5,14 +5,7 @@ import { baseUrl } from "../Axios";
 import DeleteProduct from "./delete Product/DeleteProduct";
 import EditProduct from "./EditProduct";
 import { addCommas } from "@persian-tools/persian-tools";
-export default function AdminPosts({
-  posts,
-  loading,
-  queryStringHandler,
-  value,
-  sortProduct,
-  sortedProduct,
-}) {
+export default function AdminPosts({ posts, loading, queryStringHandler, value, sortProduct, sortedProduct }) {
   if (loading) {
     return <h2>Loading...</h2>;
   }
@@ -37,18 +30,13 @@ export default function AdminPosts({
   };
   const submitHandler = (event) => {
     event.preventDefault();
-    posts
-      .filter((post) => post.name === searchInput)
-      .map((index) => alert(`${index.price}`));
+    posts.filter((post) => post.name === searchInput).map((index) => alert(`${index.price}`));
   };
 
   return (
     <>
       <form onSubmit={submitHandler} className="mb-3">
-        <label
-          htmlFor="default-search"
-          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-        >
+        <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
           جستجو در محصولات
         </label>
         <div className="relative">
@@ -86,10 +74,7 @@ export default function AdminPosts({
         </div>
       </form>
       <AddProduct className="mb-4" />
-      <div
-        className="relative overflow-x-auto shadow-md sm:rounded-lg"
-        dir="rtl"
-      >
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg" dir="rtl">
         <table className="w-full text-sm text-left  text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr className="bg-zinc-200">
@@ -114,14 +99,8 @@ export default function AdminPosts({
               <th scope="col" class="px-6 py-3">
                 <p className="flex justify-center items-center"> دسته</p>
               </th>
-              <th
-                scope="col"
-                class="px-6 py-3 flex justify-center items-center gap-2 "
-              >
-                <button
-                  className="outline-none border-none"
-                  onClick={sortProduct}
-                >
+              <th scope="col" class="px-6 py-3 flex justify-center items-center gap-2 ">
+                <button className="outline-none border-none" onClick={sortProduct}>
                   <svg
                     aria-hidden="true"
                     className=" mb-1 w-5 h-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
@@ -146,10 +125,7 @@ export default function AdminPosts({
           </thead>
           <tbody className="bg-zinc-200">
             {/* {console.log(product)} */}
-            {(sortedProduct
-              ? [...posts].sort((a, b) => a.price - b.price)
-              : posts
-            ).map((post) => (
+            {(sortedProduct ? [...posts].sort((a, b) => a.price - b.price) : posts).map((post) => (
               <tr
                 className="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600"
                 key={post.id}
@@ -171,10 +147,7 @@ export default function AdminPosts({
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   key={post.id}
                 >
-                  <p className="flex justify-center items-center">
-                    {" "}
-                    {post.name}
-                  </p>{" "}
+                  <p className="flex justify-center items-center"> {post.name}</p>{" "}
                 </th>
                 <td class="px-6 py-4">
                   {" "}
@@ -195,9 +168,7 @@ export default function AdminPosts({
                 </td>
                 <td class="px-6 py-4 ">
                   {" "}
-                  <p className="flex justify-center items-center">
-                    {addCommas(`${post.price}`)} تومان
-                  </p>
+                  <p className="flex justify-center items-center">{addCommas(`${post.price}`)} تومان</p>
                 </td>
                 <td className="px-6 py-4 flex justify-center gap-4 items-center">
                   <button
@@ -217,19 +188,13 @@ export default function AdminPosts({
                     class="font-medium text-red-600 dark:text-red-500 hover:underline outline-none border-none"
                     id={post.id}
                   >
-                    <p className="flex justify-center items-center text-red-500">
-                      حذف
-                    </p>
+                    <p className="flex justify-center items-center text-red-500">حذف</p>
                   </DeleteProduct>
                 </td>
               </tr>
             ))}
             {activeEditButton ? (
-              <EditProduct
-                activeEditButton={activeEditButton}
-                closeModal={closeModal}
-                product={product}
-              />
+              <EditProduct activeEditButton={activeEditButton} closeModal={closeModal} product={product} />
             ) : null}
           </tbody>
         </table>

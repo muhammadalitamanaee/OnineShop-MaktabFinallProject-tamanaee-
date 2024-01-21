@@ -10,8 +10,7 @@ const Error = () => {
             Something's missing.
           </p>
           <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-            صفحه مورد نظر شما یافت نشد میتوانید با کلیک بر روی دکمه زیر به صفحه
-            اصلی سایت برگردید
+            صفحه مورد نظر شما یافت نشد میتوانید با کلیک بر روی دکمه زیر به صفحه اصلی سایت برگردید
           </p>
           <NavLink
             to="/"

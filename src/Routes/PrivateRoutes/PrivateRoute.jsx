@@ -7,10 +7,5 @@ export default function PrivateRoute({ element: element, ...rest }) {
   const accessToken = useSelector((state) => state.login.accessToken);
   const isAuthenticated = accessToken ? true : false;
   const navigate = useNavigate();
-  return (
-    <Route
-      {...rest}
-      element={isAuthenticated ? element : <Navigate to={"/LoginAdmin"} />}
-    />
-  );
+  return <Route {...rest} element={isAuthenticated ? element : <Navigate to={"/LoginAdmin"} />} />;
 }

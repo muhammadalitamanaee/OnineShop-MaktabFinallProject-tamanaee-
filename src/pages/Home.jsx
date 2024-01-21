@@ -31,12 +31,7 @@ function App() {
 
       <hr className="w-full h-[1px] bg-zinc-400 mb-4 mt-4" />
       <Posts posts={currentPosts} loading={loading} className="mb-3" />
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={posts.length}
-        paginate={paginate}
-        className="mb-3"
-      />
+      <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} className="mb-3" />
     </>
   );
 }

@@ -5,5 +5,3 @@ const store = configureStore({
   reducer: { login: loginState.reducer, cart: cartSlice.reducer },
 });
 export default store;
-
-// ####

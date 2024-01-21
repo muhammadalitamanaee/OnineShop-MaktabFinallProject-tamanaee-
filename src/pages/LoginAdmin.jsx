@@ -28,10 +28,7 @@ const LoginAdmin = () => {
 
       <form>
         <div class="mb-6 mt-6">
-          <label
-            htmlFor="text"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
+          <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             نام کاربری{" "}
           </label>
           <input
@@ -44,10 +41,7 @@ const LoginAdmin = () => {
           />
         </div>
         <div className="mb-6 mt-6">
-          <label
-            htmlFor="password"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-          >
+          <label htmlFor="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
             رمز عبور{" "}
           </label>
           <input
@@ -67,10 +61,7 @@ const LoginAdmin = () => {
               className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
             />
           </div>
-          <label
-            htmlFor="remember"
-            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-          >
+          <label htmlFor="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
             مرا به خاطر بسپار{" "}
           </label>
         </div>

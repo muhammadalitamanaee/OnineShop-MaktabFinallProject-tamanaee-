@@ -20,11 +20,7 @@ export default function AdminProducts() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(
-        `http://localhost:3001/products${
-          queryString ? `?name=${queryString}` : ""
-        }`
-      )
+      .get(`http://localhost:3001/products${queryString ? `?name=${queryString}` : ""}`)
       .then((res) => setPosts(res.data))
       .catch((err) => console.log(err));
     setLoading(false);
@@ -50,11 +46,7 @@ export default function AdminProducts() {
         sortProduct={sortProduct}
         sortedProduct={sortedProduct}
       />
-      <AdminPagination
-        postsPerPage={postsPerPage}
-        totalPosts={posts.length}
-        paginate={paginate}
-      />
+      <AdminPagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
     </>
   );
 }

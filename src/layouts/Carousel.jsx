@@ -10,18 +10,11 @@ import carousel7 from "../assets/carousel7.jpg";
 const MainCarousel = () => {
   return (
     <>
-      <div
-        id="indicators-carousel"
-        className="relative bg-zinc-500 rounded-lg"
-        data-carousel="static"
-      >
+      <div id="indicators-carousel" className="relative bg-zinc-500 rounded-lg" data-carousel="static">
         {/* <!-- Carousel wrapper --> */}
         <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
           {/* <!-- Item 1 --> */}
-          <div
-            className="hidden duration-700 ease-in-out"
-            data-carousel-item="active"
-          >
+          <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
             <img
               src={carousel6}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -114,12 +107,7 @@ const MainCarousel = () => {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 19l-7-7 7-7"
-              ></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
             <span className="sr-only">Previous</span>
           </span>
@@ -138,12 +126,7 @@ const MainCarousel = () => {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              ></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
             <span className="sr-only">Next</span>
           </span>
