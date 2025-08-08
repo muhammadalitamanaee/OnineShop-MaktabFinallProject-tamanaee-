@@ -3,6 +3,7 @@ import axios from "axios";
 import { baseUrl } from "../components/Axios";
 import { addCommas } from "@persian-tools/persian-tools";
 import { Link } from "react-router-dom";
+import Image from "next/image";
 export default function LopTopProducts() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function LopTopProducts() {
               <Link to={`/:${post.id}`}>
                 {" "}
                 <div>
-                  <img className="p-8 rounded-t-lg" src={baseUrl + post.image} alt="product image" />
+                  <Image className="p-8 rounded-t-lg" src={baseUrl + post.image} alt="product image" />
                 </div>
               </Link>
               <div className="px-5 pb-5">

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { baseUrl } from "./../components/Axios";
 import { cartAction } from "../store/cart-store";
 import { addCommas } from "@persian-tools/persian-tools";
+import Image from "next/image";
 const ShoppingCart = () => {
   const items = useSelector((state) => state.cart.items);
   const Quantity = useSelector((state) => state.cart.totoalQuantity);
@@ -59,7 +60,7 @@ const ShoppingCart = () => {
               <div class="flex w-2/5 items-center h-full">
                 {/* <!-- product --> */}
                 <Link to={`/:${item.id}`} className="h-full w-full">
-                  <img
+                  <Image
                     class="object-cover w-full rounded-t-lg h-full md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
                     src={`${baseUrl}${item.image}`}
                     alt=""

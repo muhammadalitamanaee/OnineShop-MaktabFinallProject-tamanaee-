@@ -5,6 +5,7 @@ import axios from "axios";
 import { addCommas } from "@persian-tools/persian-tools";
 import { baseUrl } from "../components/Axios";
 import FiveStars from "../components/FiveStar";
+import Image from "next/image";
 
 const MobileProducts = () => {
   const [posts, setPosts] = useState([]);
@@ -26,7 +27,7 @@ const MobileProducts = () => {
               <Link to={`/:${post.id}`}>
                 {" "}
                 <div>
-                  <img className="p-8 rounded-t-lg" src={baseUrl + post.image} alt="product image" />
+                  <Image className="p-8 rounded-t-lg" src={baseUrl + post.image} alt="product image" />
                 </div>
               </Link>
               <div className="px-5 pb-5">

@@ -6,6 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import NavBar from "./NavBar";
 import SignInInfo from "./../components/SignInInfo";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
         {/* sticky position and z-index or fixed and z-index */}
         <div className="flex justify-center items-center gap-1">
           <a href="#">
-            <img src={MainLogo}></img>
+            <Image src={MainLogo}></Image>
           </a>
           <Link to="/">
             <div className="flex justify-center gap-[4px] items-center">

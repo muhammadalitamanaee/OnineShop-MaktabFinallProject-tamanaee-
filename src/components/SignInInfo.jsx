@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import react from "../assets/react.svg";
+import Image from "next/image";
 const SignInInfo = (props) => {
   const { className } = props;
   const items = useSelector((state) => state.cart.items);
@@ -18,7 +19,7 @@ const SignInInfo = (props) => {
         data-dropdown-placement="bottom"
       >
         <span className="sr-only">Open user menu</span>
-        <img className="w-8 h-8 rounded-full" src={react} alt="user photo" />
+        <Image className="w-8 h-8 rounded-full" src={react} alt="user photo" />
       </button>
       {/* <!-- Dropdown menu --> */}
       <div

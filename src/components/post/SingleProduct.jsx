@@ -7,6 +7,7 @@ import { addCommas } from "@persian-tools/persian-tools";
 import { cartAction } from "../../store/cart-store";
 import SimilarProducts from "./SimilarProducts";
 import { useDispatch } from "react-redux";
+import Image from "next/image";
 const ProductDetails = ({ product }) => {
   const [posts, setPosts] = useState([]);
   const { ProductId } = useParams();
@@ -40,7 +41,7 @@ const ProductDetails = ({ product }) => {
             <div className="md:flex-1 px-4">
               <div className="h-[230px] w-[350px] rounded-lg bg-gray-100 mb-4">
                 <div className="  rounded-lg bg-gray-100 mb-4 flex items-center justify-center">
-                  <img src={`${baseUrl}${image}`} className="w-full h-full" alt="" />{" "}
+                  <Image src={`${baseUrl}${image}`} className="w-full h-full" alt="" />{" "}
                 </div>
               </div>
             </div>

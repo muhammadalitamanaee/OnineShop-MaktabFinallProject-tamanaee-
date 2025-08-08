@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "../assets/logo-symbol.svg";
 import text from "../assets/Shopify.png";
+import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900">
       <div className="md:flex md:justify-between">
         <div className="mb-6 md:mb-0">
           <a href="https://flowbite.com/" className="flex items-center" rtl="ltr">
-            <img src={logo} className="h-8 mr-3" alt="FlowBite Logo" />
+            <Image src={logo} className="h-8 mr-3" alt="FlowBite Logo" />
             <div className="flex justify-center gap-[4px] items-center">
               <p className="font-semibold text-[20px] bg-gradient-to-r from-blue-700  to-blue-500  bg-clip-text text-transparent">
                 {" "}

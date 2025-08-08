@@ -7,6 +7,7 @@ import carousel2 from "../assets/carousel2.jpg";
 import carousel1 from "../assets/carousel1.jpg";
 import carousel6 from "../assets/carousel6.jpg";
 import carousel7 from "../assets/carousel7.jpg";
+import Image from "next/image";
 const MainCarousel = () => {
   return (
     <>
@@ -15,7 +16,7 @@ const MainCarousel = () => {
         <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
           {/* <!-- Item 1 --> */}
           <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <img
+            <Image
               src={carousel6}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
@@ -23,7 +24,7 @@ const MainCarousel = () => {
           </div>
           {/* <!-- Item 2 --> */}
           <div class="hidden duration-700 ease-in-out">
-            <img
+            <Image
               src={carousel7}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
@@ -31,7 +32,7 @@ const MainCarousel = () => {
           </div>
           {/* <!-- Item 3 --> */}
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
+            <Image
               src={carousel5}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
@@ -39,7 +40,7 @@ const MainCarousel = () => {
           </div>
           {/* <!-- Item 4 --> */}
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
+            <Image
               src={carousel4}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."
@@ -47,7 +48,7 @@ const MainCarousel = () => {
           </div>
           {/* <!-- Item 5 --> */}
           <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
+            <Image
               src={carousel5}
               className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               alt="..."

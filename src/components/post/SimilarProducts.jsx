@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { baseUrl } from "../Axios";
 import { Link } from "react-router-dom";
 import "./similarProducts.css";
+import Image from "next/image";
 const SimilarProducts = ({ id, brand }) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -17,7 +18,7 @@ const SimilarProducts = ({ id, brand }) => {
       {products.map((product) => (
         <Link className="px-4 " key={product.id} to={`/:${product.id}`}>
           <div className="w-[255px] h-[170px] rounded-md">
-            <img src={`${baseUrl}${product.image}`} className="w-full h-full" alt={product.name} />
+            <Image src={`${baseUrl}${product.image}`} className="w-full h-full" alt={product.name} />
           </div>
           <div className="text-center mt-2">
             <h3 className="text-lg font-bold">{product.name}</h3>
