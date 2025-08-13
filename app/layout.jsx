@@ -1,3 +1,4 @@
+import "../public/style/app.css";
 import Footer from "../src/layouts/Footer";
 import Header from "../src/layouts/Header";
 
