@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { baseUrl } from "./../components/Axios";
+import { baseUrl } from "../components/Axios";
 import { useSelector, useDispatch } from "react-redux";
 import getTokens from "../store/token-action";
 import { useNavigate } from "react-router-dom";

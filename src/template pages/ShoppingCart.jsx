@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { baseUrl } from "./../components/Axios";
+import { baseUrl } from "../components/Axios";
 import { cartAction } from "../store/cart-store";
 import { addCommas } from "@persian-tools/persian-tools";
 import Image from "next/image";
