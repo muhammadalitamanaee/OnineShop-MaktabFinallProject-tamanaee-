@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { baseUrl } from "../Axios";
-import { Link } from "react-router-dom";
 import "./similarProducts.css";
 import Image from "next/image";
+import Link from "next/link";
 const SimilarProducts = ({ id, brand }) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -16,7 +16,7 @@ const SimilarProducts = ({ id, brand }) => {
   return (
     <div class="flex overflow-x-auto w-full h-[350px] p-4 rounded-[32px] bg-gray-50">
       {products.map((product) => (
-        <Link className="px-4 " key={product.id} to={`/:${product.id}`}>
+        <Link className="px-4 " key={product.id} href={`/:${product.id}`}>
           <div className="w-[255px] h-[170px] rounded-md">
             <Image src={`${baseUrl}${product.image}`} className="w-full h-full" alt={product.name} />
           </div>

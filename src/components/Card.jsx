@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { addCommas } from "@persian-tools/persian-tools";
-import { Link } from "react-router-dom";
 import { baseUrl } from "./Axios";
 import { useDispatch } from "react-redux";
 import { cartAction } from "../store/cart-store";
+import Link from "next/link";
 const Card = ({ id, image, name, price }) => {
   const dispatch = useDispatch();
   const AddToCartHandler = (id, price, image, name, brand) => {
@@ -12,7 +12,7 @@ const Card = ({ id, image, name, price }) => {
   return (
     <li key={id} className="col-span-4 mx-auto ">
       <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <Link to={`/:${id}`}>
+        <Link href={`/:${id}`}>
           <div>
             <Image className="p-8 rounded-t-lg" src={baseUrl + image} alt="product image" />
           </div>

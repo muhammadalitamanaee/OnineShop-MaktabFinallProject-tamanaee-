@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { baseUrl } from "../components/Axios";
 import { addCommas } from "@persian-tools/persian-tools";
-import { Link } from "react-router-dom";
 import Image from "next/image";
+import Link from "next/link";
 export default function LopTopProducts() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function LopTopProducts() {
         .map((post) => (
           <li key={post.id} className="col-span-4 mx-auto ">
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Link to={`/:${post.id}`}>
+              <Link href={`/:${post.id}`}>
                 {" "}
                 <div>
                   <Image className="p-8 rounded-t-lg" src={baseUrl + post.image} alt="product image" />

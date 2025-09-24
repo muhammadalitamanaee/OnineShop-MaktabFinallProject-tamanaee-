@@ -1,13 +1,12 @@
-"use client"
+"use client";
 
 import Container from "./Container";
 import MainLogo from "../assets/logo-symbol.svg";
-import { Link, NavLink } from "react-router-dom";
-// const SignInInfo = lazy(() => import("../components/SignInInfo"));
 
 import NavBar from "./NavBar";
 import SignInInfo from "./../components/SignInInfo";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -18,7 +17,7 @@ const Header = () => {
           <a href="#">
             <Image src={MainLogo}></Image>
           </a>
-          <Link to="/">
+          <Link href="/">
             <div className="flex justify-center gap-[4px] items-center">
               <p className="font-black text-[25px] bg-gradient-to-r from-blue-500 via-green-600 to-blue-700  bg-clip-text text-transparent">
                 شاپیفای
@@ -36,8 +35,8 @@ const Header = () => {
           <SignInInfo />
           {/* </Suspense> */}
 
-          <NavLink
-            to="/LoginAdmin"
+          <Link
+            href="/LoginAdmin"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
             <div className="flex justify-center items-center gap-4">
@@ -52,7 +51,7 @@ const Header = () => {
                 <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
               </svg>
             </div>
-          </NavLink>
+          </Link>
         </div>
       </Container>
 
