@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import { baseUrl } from "../components/Axios";
 import { useSelector, useDispatch } from "react-redux";
 import getTokens from "../store/token-action";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
+
 const LoginAdmin = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const dispatch = useDispatch();
   const [accessT, setAccesst] = useState("");
   const accesToken = useSelector((state) => state.login.accesToken);
@@ -19,7 +20,7 @@ const LoginAdmin = () => {
     setLoginform({ ...loginForm, password: e.target.value });
   };
   const submitHandler = (username, password) => {
-    return dispatch(getTokens(username, password)), navigate("/AdminProducts");
+    return dispatch(getTokens(username, password)), router.push("/AdminProducts");
   };
 
   return (

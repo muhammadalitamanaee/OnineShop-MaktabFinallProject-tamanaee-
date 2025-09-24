@@ -2,7 +2,6 @@ import { loginAction } from "./token-slice";
 
 import { baseUrl } from "../components/Axios";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 const getTokens = (username, password) => {
   return (dispatch) => {

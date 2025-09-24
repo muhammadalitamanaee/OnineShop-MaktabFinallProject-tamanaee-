@@ -1,10 +1,6 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import Link from "next/link";
 const SearchBar = (props) => {
   const { className } = props;
-  const navigate = useNavigate();
-  const navigate1 = useNavigate();
-  const navigate2 = useNavigate();
   return (
     <div className={`flex ${className}`} dir="ltr">
       <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
@@ -41,16 +37,16 @@ const SearchBar = (props) => {
               تلفن همراه
             </a>
           </li>
-          <li onClick={() => navigate("/Products")}>
+          <Link href="/Products">
             <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               خانه و آشپزخانه
             </a>
-          </li>
-          <li onClick={() => navigate1("/Mojodi")}>
+          </Link>
+          <Link href="/Mojodi">
             <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
               آرایش و زیبایی
             </a>
-          </li>
+          </Link>
         </ul>
       </div>
       <div className="relative w-full">

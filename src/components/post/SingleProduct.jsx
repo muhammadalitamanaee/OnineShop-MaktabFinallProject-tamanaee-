@@ -1,5 +1,4 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { baseUrl } from "../Axios";
 import axios from "axios";
@@ -8,6 +7,7 @@ import { cartAction } from "../../store/cart-store";
 import SimilarProducts from "./SimilarProducts";
 import { useDispatch } from "react-redux";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 const ProductDetails = ({ product }) => {
   const [posts, setPosts] = useState([]);
   const { ProductId } = useParams();

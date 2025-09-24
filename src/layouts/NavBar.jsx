@@ -1,10 +1,6 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import MainContex from "./../contex/contex-hook";
+import Link from "next/link";
 
 const NavBar = (props) => {
-  const mainContex = useContext(MainContex);
-  const navigate = useNavigate();
   return (
     <nav dir="rtl" className="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
@@ -69,23 +65,17 @@ const NavBar = (props) => {
               >
                 <ul className="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                   <li>
-                    <button
-                      href="#"
+                    <Link
+                      href="/Products"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white outline-none mx-auto w-full"
-                      onClick={() => {
-                        navigate("/Products");
-                      }}
                     >
                       موبایل
-                    </button>
+                    </Link>
                   </li>
                   <li>
                     <button
-                      href="#"
+                      href="/LopTops"
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white outline-none mx-auto w-full "
-                      onClick={() => {
-                        navigate("/LopTops");
-                      }}
                     >
                       لپتاپ
                     </button>

@@ -1,6 +1,7 @@
 import "../public/style/app.css";
 import Footer from "../src/layouts/Footer";
 import Header from "../src/layouts/Header";
+import ClintSideProvider from "../src/layouts/ClientSideProvider";
 
 export const metadata = {
   title: "My App",
@@ -30,9 +31,11 @@ export default function RootLayout({ children }) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
         <div id="root">
           {" "}
-          <Header />
-          {children}
-          <Footer />
+          <ClintSideProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ClintSideProvider>
         </div>
       </body>
     </html>
