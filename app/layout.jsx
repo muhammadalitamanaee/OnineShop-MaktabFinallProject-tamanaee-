@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/icon.svg" />
         <title>My App</title>
         <meta name="description" content="onlineShop" />

@@ -1,5 +1,6 @@
+"use client"
+
 import Container from "./Container";
-import React, { lazy, Suspense } from "react";
 import MainLogo from "../assets/logo-symbol.svg";
 import { Link, NavLink } from "react-router-dom";
 // const SignInInfo = lazy(() => import("../components/SignInInfo"));

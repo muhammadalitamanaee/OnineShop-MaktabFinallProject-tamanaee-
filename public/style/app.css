@@ -46,7 +46,7 @@
 }
 @font-face {
   font-family: Vazirmatn FD;
-  src: url("fonts/webfonts/Vazirmatn-FD-Medium.woff2") format("woff2");
+  src: url("../fonts/webfonts/Vazirmatn-FD-Medium.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
